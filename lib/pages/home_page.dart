@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'my_list.dart';
+import 'profile.dart';
+import 'about.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -25,6 +28,17 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            const DrawerHeader(child: Text('Drawer Header')),
+            addPageToList(Text('Perfil'), context, Profile()),
+            addPageToList(Text('Mi Lista'), context, MyList()),
+            addPageToList(Text('Sobre Nosotros'), context, About()),
+          ],
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -44,4 +58,17 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
   }
+}
+
+ListTile addPageToList(
+  Text pageName,
+  BuildContext context,
+  StatelessWidget page,
+) {
+  return ListTile(
+    title: pageName,
+    onTap: () {
+      Navigator.push(context, MaterialPageRoute(builder: (context) => page));
+    },
+  );
 }
