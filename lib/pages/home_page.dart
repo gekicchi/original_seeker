@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'my_list.dart';
 import 'profile.dart';
 import 'about.dart';
-import 'package:original_seeker/util/original_version.dart';
+import 'original_details.dart';
+import 'package:original_seeker/util/util_functions.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -36,30 +37,20 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            OriginalVersion(
-              image: Icon(Icons.fire_hydrant, size: 125),
-              button: FloatingActionButton(onPressed: () => {}),
+            Text(
+              'Recientemente Adaptado',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
-            OriginalVersion(
-              image: Icon(Icons.fire_hydrant, size: 125),
-              button: FloatingActionButton(onPressed: () => {}),
+            addOriginal(
+              Icon(Icons.donut_large, size: 125),
+              'Minecraft',
+              'A Minecraft Movie',
+              '9.5/10',
+              () => {},
             ),
           ],
         ),
       ),
     );
   }
-}
-
-ListTile addPageToList(
-  Text pageName,
-  BuildContext context,
-  StatelessWidget page,
-) {
-  return ListTile(
-    title: pageName,
-    onTap: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => page));
-    },
-  );
 }

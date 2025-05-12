@@ -2,8 +2,19 @@ import 'package:flutter/material.dart';
 
 class OriginalVersion extends StatelessWidget {
   final Icon image;
-  final FloatingActionButton button;
-  const OriginalVersion({super.key, required this.image, required this.button});
+  final String name;
+  final String adaptationName;
+  final String score;
+  final VoidCallback onPressed;
+
+  const OriginalVersion({
+    super.key,
+    required this.image,
+    required this.name,
+    required this.adaptationName,
+    required this.score,
+    required this.onPressed,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,11 +23,11 @@ class OriginalVersion extends StatelessWidget {
         children: [
           image,
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('aqui va el nombre'),
-              Text('aqui va el nombre de la adapacion'),
-              Text('aqui va la puntuacion'),
-              button,
+              Text(name, style: TextStyle(fontWeight: FontWeight.bold)),
+              Text(adaptationName),
+              Text(score),
             ],
           ),
         ],
