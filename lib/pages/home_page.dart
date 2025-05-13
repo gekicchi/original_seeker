@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'my_list.dart';
 import 'profile.dart';
 import 'about.dart';
@@ -42,11 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
             addOriginal(
-              Icon(Icons.donut_large, size: 125),
+              SvgPicture.asset('images/adaptations/minecraft.svg'),
               'Minecraft',
               'A Minecraft Movie',
               '9.5/10',
-              () => {},
             ),
           ],
         ),

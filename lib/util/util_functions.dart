@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'original_version.dart';
 
 ListTile addPageToList(
@@ -17,18 +18,16 @@ ListTile addPageToList(
 }
 
 OriginalVersion addOriginal(
-  Icon img,
+  SvgPicture img,
   String myName,
   String adaptName,
   String scr,
-  VoidCallback pressed,
 ) {
   return OriginalVersion(
     image: img,
     name: myName,
     adaptationName: adaptName,
     score: scr,
-    onPressed: pressed,
   );
 }
 
