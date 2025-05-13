@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:original_seeker/pages/original_details.dart';
-import 'util_functions.dart';
 
 class OriginalVersion extends StatelessWidget {
   final SvgPicture image;

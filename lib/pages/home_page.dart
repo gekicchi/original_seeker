@@ -1,11 +1,8 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'my_list.dart';
 import 'profile.dart';
 import 'about.dart';
-import 'original_details.dart';
 import 'package:original_seeker/util/util_functions.dart';
 
 class MyHomePage extends StatefulWidget {
