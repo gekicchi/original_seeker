@@ -6,6 +6,8 @@ class OriginalVersion extends StatelessWidget {
   final SvgPicture image;
   final String name;
   final String adaptationName;
+  final String adaptatedInto;
+  final String description;
   final String score;
 
   const OriginalVersion({
@@ -13,6 +15,8 @@ class OriginalVersion extends StatelessWidget {
     required this.image,
     required this.name,
     required this.adaptationName,
+    required this.adaptatedInto,
+    required this.description,
     required this.score,
   });
 

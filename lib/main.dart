@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Original Seeker',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 183, 60, 58),
+          seedColor: const Color.fromARGB(255, 68, 18, 17),
         ),
       ),
       home: const MyHomePage(title: 'Original Seeker'),

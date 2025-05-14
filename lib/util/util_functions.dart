@@ -21,16 +21,16 @@ OriginalVersion addOriginal(
   SvgPicture img,
   String myName,
   String adaptName,
+  String into,
+  String desc,
   String scr,
 ) {
   return OriginalVersion(
     image: img,
     name: myName,
     adaptationName: adaptName,
+    adaptatedInto: into,
+    description: desc,
     score: scr,
   );
-}
-
-void goToPage(BuildContext context, StatelessWidget page) {
-  Navigator.push(context, MaterialPageRoute(builder: (context) => page));
 }
