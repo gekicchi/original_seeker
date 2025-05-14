@@ -3,29 +3,16 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:original_seeker/pages/original_details.dart';
 
 class OriginalVersion extends StatelessWidget {
-  final SvgPicture image;
-  final String name;
-  final String adaptationName;
-  final String adaptatedInto;
-  final String description;
-  final String score;
+  final Original or;
 
-  const OriginalVersion({
-    super.key,
-    required this.image,
-    required this.name,
-    required this.adaptationName,
-    required this.adaptatedInto,
-    required this.description,
-    required this.score,
-  });
+  const OriginalVersion({super.key, required this.or});
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Row(
         children: [
-          image,
+          or.image,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -39,16 +26,41 @@ class OriginalVersion extends StatelessWidget {
                       ),
                     ),
                 child: Text(
-                  name,
+                  or.name,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
-              Text(adaptationName),
-              Text(score),
+              Text(or.adaptationName),
+              Text(or.score),
             ],
           ),
         ],
       ),
     );
+  }
+}
+
+class Original {
+  late SvgPicture image;
+  late String name;
+  late String adaptationName;
+  late String adaptatedInto;
+  late String description;
+  late String score;
+
+  Original(
+    SvgPicture img,
+    String nm,
+    String adNm,
+    String adIn,
+    String desc,
+    String sc,
+  ) {
+    image = img;
+    name = nm;
+    adaptationName = adNm;
+    adaptatedInto = adIn;
+    description = desc;
+    score = sc;
   }
 }

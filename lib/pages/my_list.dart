@@ -10,6 +10,8 @@ class MyList extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Mi Lista'),
       ),
+
+      body: SingleChildScrollView(),
     );
   }
 }

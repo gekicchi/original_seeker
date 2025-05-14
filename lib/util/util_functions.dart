@@ -34,3 +34,23 @@ OriginalVersion addOriginal(
     score: scr,
   );
 }
+
+class ListofOriginals {
+  List<OriginalVersion> originals = List.empty();
+
+  ListofOriginals(List<OriginalVersion> or) {
+    originals = or;
+  }
+
+  OriginalVersion getAtIndex(int index) {
+    return originals.elementAt(index);
+  }
+
+  void addToList(OriginalVersion original) {
+    originals.add(original);
+  }
+
+  void removeFromList(int index) {
+    originals.removeAt(index);
+  }
+}

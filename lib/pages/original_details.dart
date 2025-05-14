@@ -12,7 +12,7 @@ class OriginalDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(originalVersion.name),
+        title: Text(originalVersion.or.name),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -20,17 +20,17 @@ class OriginalDetails extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset('images/adaptations/minecraft.svg'),
+              originalVersion.or.image,
               Card(
                 child: Center(
                   child: Column(
                     children: [
                       Text(
-                        originalVersion.score,
+                        originalVersion.or.score,
                         textScaler: TextScaler.linear(3),
                       ),
                       Text(
-                        '${originalVersion.adaptatedInto} que inspiró ${originalVersion.adaptationName}',
+                        '${originalVersion.or.adaptatedInto} que inspiró ${originalVersion.or.adaptationName}',
                       ),
                       TextButton(
                         onPressed: () => {},
@@ -48,7 +48,7 @@ class OriginalDetails extends StatelessWidget {
                               textAlign: TextAlign.center,
                             ),
                           ),
-                          children: [Text(originalVersion.description)],
+                          children: [Text(originalVersion.or.description)],
                         ),
                       ),
                       TextField(
