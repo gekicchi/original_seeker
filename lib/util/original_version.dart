@@ -4,7 +4,6 @@ import 'package:original_seeker/pages/original_details.dart';
 
 class OriginalVersion extends StatelessWidget {
   final Original or;
-
   const OriginalVersion({super.key, required this.or});
 
   @override

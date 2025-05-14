@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'original_version.dart';
 
 ListTile addPageToList(
@@ -17,28 +16,14 @@ ListTile addPageToList(
   );
 }
 
-OriginalVersion addOriginal(
-  SvgPicture img,
-  String myName,
-  String adaptName,
-  String into,
-  String desc,
-  String scr,
-) {
-  return OriginalVersion(
-    image: img,
-    name: myName,
-    adaptationName: adaptName,
-    adaptatedInto: into,
-    description: desc,
-    score: scr,
-  );
+OriginalVersion addOriginal(Original or) {
+  return OriginalVersion(or: or);
 }
 
-class ListofOriginals {
+class ListOfOriginals {
   List<OriginalVersion> originals = List.empty();
 
-  ListofOriginals(List<OriginalVersion> or) {
+  ListOfOriginals(List<OriginalVersion> or) {
     originals = or;
   }
 

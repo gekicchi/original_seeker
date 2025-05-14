@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:original_seeker/util/original_list.dart';
 import 'package:original_seeker/util/original_version.dart';
 
 class OriginalDetails extends StatelessWidget {
@@ -33,7 +33,7 @@ class OriginalDetails extends StatelessWidget {
                         '${originalVersion.or.adaptatedInto} que inspiró ${originalVersion.or.adaptationName}',
                       ),
                       TextButton(
-                        onPressed: () => {},
+                        onPressed: () => {myList.add(originalVersion)},
                         child: Text(
                           'Añadir a Lista',
                           style: TextStyle(fontWeight: FontWeight.bold),

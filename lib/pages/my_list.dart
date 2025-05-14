@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:original_seeker/util/original_list.dart';
 
 class MyList extends StatelessWidget {
   const MyList({super.key});
@@ -11,7 +12,12 @@ class MyList extends StatelessWidget {
         title: const Text('Mi Lista'),
       ),
 
-      body: SingleChildScrollView(),
+      body: ListView.builder(
+        itemCount: myList.length,
+        itemBuilder: (context, index) {
+          return ListTile(title: myList[index]);
+        },
+      ),
     );
   }
 }
