@@ -46,6 +46,7 @@ class Original {
   late String adaptatedInto;
   late String description;
   late String score;
+  late List<String> reviews;
 
   Original(
     SvgPicture img,
@@ -54,6 +55,7 @@ class Original {
     String adIn,
     String desc,
     String sc,
+    List<String> rev,
   ) {
     image = img;
     name = nm;
@@ -61,5 +63,6 @@ class Original {
     adaptatedInto = adIn;
     description = desc;
     score = sc;
+    reviews = rev;
   }
 }

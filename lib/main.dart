@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'pages/home_page.dart';
+import 'pages/splashscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 68, 18, 17),
         ),
       ),
-      home: const MyHomePage(title: 'Original Seeker'),
+      home: const SplashScreen(),
     );
   }
 }

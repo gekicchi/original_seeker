@@ -40,6 +40,7 @@ class OriginalDetails extends StatelessWidget {
                         ),
                       ),
                       Card(
+                        margin: EdgeInsets.all(10),
                         color: const Color.fromARGB(255, 232, 161, 161),
                         child: ExpansionTile(
                           title: Card(
@@ -48,6 +49,7 @@ class OriginalDetails extends StatelessWidget {
                               textAlign: TextAlign.center,
                             ),
                           ),
+                          childrenPadding: EdgeInsets.all(10),
                           children: [Text(originalVersion.or.description)],
                         ),
                       ),
@@ -57,6 +59,30 @@ class OriginalDetails extends StatelessWidget {
                           hintText: 'deja tu reseña aqui',
                         ),
                         maxLines: 3,
+                      ),
+                      Card(
+                        margin: EdgeInsets.all(10),
+                        color: const Color.fromARGB(255, 232, 161, 161),
+                        child: ExpansionTile(
+                          title: Card(
+                            child: Text('Reseñas', textAlign: TextAlign.center),
+                          ),
+                          childrenPadding: EdgeInsets.all(10),
+                          children: [
+                            Card(
+                              child: Text(
+                                originalVersion.or.reviews[0],
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                            Card(
+                              child: Text(
+                                originalVersion.or.reviews[1],
+                                textAlign: TextAlign.start,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

@@ -15,7 +15,7 @@ class MyList extends StatelessWidget {
       body: ListView.builder(
         itemCount: myList.length,
         itemBuilder: (context, index) {
-          return ListTile(title: myList[index]);
+          return Card(child: ListTile(title: myList[index]));
         },
       ),
     );
