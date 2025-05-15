@@ -1,16 +1,19 @@
-# original_seeker
+# Original Seeker
+Esta aplicación sirve como repositorio de las versiones originales de peliculas adaptadas (comics, videojuegos, libros), y permite a los usuarios subir reseñas de estas y añadirlas a listas de planear ver/haber visto
 
-A new Flutter project.
+## Pantallas importantes
+**Home Page:** da una pequeña descripcion de en que consiste la aplicacion y muestra una lista de material recientemente adaptado
 
-## Getting Started
+**Perfil:** muestra los datos del usuario como su foto de perfil, correo asociado y su ultima vez online
 
-This project is a starting point for a Flutter application.
+**Mi Lista:** muestra las versiones originales que el usuario planea ver o ya vio
 
-A few resources to get you started if this is your first Flutter project:
+**Detalles:** muestra los datos de cada version original, su puntuacion, sinopsis, reseñas que dejaron otros usuarios y la opcion de dejar que el usuario suba sus propias reseñas
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Funcionalidades relevantes
+**Listas:** Capacidad de añadir versiones originales a listas
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Buscar:** Opcion de buscar versiones originales por su nombre
+
+## Link del video explicativo
+https://youtu.be/T69p7YtVegI
