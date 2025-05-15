@@ -3,7 +3,6 @@ import 'package:original_seeker/pages/original_details.dart';
 import 'package:original_seeker/util/original_list.dart';
 import 'my_list.dart';
 import 'profile.dart';
-import 'about.dart';
 import 'package:original_seeker/util/util_functions.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -54,7 +53,6 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             addPageToList(Text('Perfil'), context, Profile()),
             addPageToList(Text('Mi Lista'), context, MyList()),
-            addPageToList(Text('Sobre Nosotros'), context, About()),
           ],
         ),
       ),
@@ -64,14 +62,28 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 10.0,
           children: [
+            Card(
+              margin: EdgeInsets.all(10),
+              child: Column(
+                children: [
+                  Text(
+                    'Descripción',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+                  ),
+                  Text(
+                    'Original Seeker busca darle un lugar a aquellas personas que no se satisfacen solo con ver películas adaptadas sino que también quieren conocer las versiones originales de estas',
+                  ),
+                ],
+              ),
+            ),
             Text(
               'Recientemente Adaptado',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
             ),
-            originals[0],
-            originals[1],
-            originals[2],
-            originals[3],
+            Card(child: originals[0]),
+            Card(child: originals[1]),
+            Card(child: originals[2]),
+            Card(child: originals[3]),
           ],
         ),
       ),

@@ -1,9 +1,9 @@
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
 import 'package:original_seeker/util/util_functions.dart';
 import 'original_version.dart';
 
 Original minecraft = Original(
-  SvgPicture.asset('images/adaptations/minecraft.svg'),
+  Image.asset('images/adaptations/minecraft.jpg'),
   'Minecraft',
   'Una Pelicula de Minecraft',
   'Videojuego',
@@ -11,14 +11,14 @@ Original minecraft = Original(
   '9.3/10',
   [
     'Una gran experiencia de principio a fin, odio a los phantoms',
-    'llego la primera noche y no deje de morir GOTY',
+    'llegó la primera noche y no dejé de morir GOTY',
   ],
 );
 
 Original percyJackson = Original(
-  SvgPicture.asset('images/adaptations/percyJ.svg'),
+  Image.asset('images/adaptations/percyJ.jpg'),
   'Percy Jackson',
-  'Percy Jackson: el Mar de los Monstruos',
+  'Percy Jackson: y el Ladrón del Rayo',
   'Libro',
   'El mar de los monstruos es una novela fantástica de aventuras basada en la mitología griega. Está escrita por el autor Rick Riordan y fue publicada el 1 de abril de 2006 en Estados Unidos, y en junio de 2008 en España,​ por la editorial Salamandra, dentro de su línea Narrativa Juvenil. Es el segundo libro de la saga Percy Jackson y los dioses del Olimpo y la secuela de El ladrón del rayo. Este libro narra las aventuras del semidiós Percy Jackson, y trata de como él y su amiga Annabeth —otra semidiosa— van a rescatar al sátiro Grover del cíclope Polifemo y salvar el campamento de los ataques de los monstruos, por lo que tienen que traer el vellocino de oro para curar de envenenamiento el árbol de Thalía',
   '9.6/10',
@@ -29,7 +29,7 @@ Original percyJackson = Original(
 );
 
 Original capitanAmerica = Original(
-  SvgPicture.asset('images/adaptations/capitanAmerica.svg'),
+  Image.asset('images/adaptations/capitanAmerica.png'),
   'Capitan America',
   'Capitan America: el Soldado del Invierno',
   'Comic',
@@ -42,7 +42,7 @@ Original capitanAmerica = Original(
 );
 
 Original lookBack = Original(
-  SvgPicture.asset('images/adaptations/lookBack.svg'),
+  Image.asset('images/adaptations/lookBack.jpeg'),
   'Look Back',
   'Look Back',
   'Manga',

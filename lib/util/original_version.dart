@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:original_seeker/pages/original_details.dart';
 
 class OriginalVersion extends StatelessWidget {
@@ -40,7 +39,7 @@ class OriginalVersion extends StatelessWidget {
 }
 
 class Original {
-  late SvgPicture image;
+  late Image image;
   late String name;
   late String adaptationName;
   late String adaptatedInto;
@@ -49,7 +48,7 @@ class Original {
   late List<String> reviews;
 
   Original(
-    SvgPicture img,
+    Image img,
     String nm,
     String adNm,
     String adIn,
