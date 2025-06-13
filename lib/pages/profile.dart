@@ -15,7 +15,7 @@ class Profile extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(8),
           child: Card(
-            color: const Color.fromARGB(255, 208, 149, 134),
+            color: Theme.of(context).cardColor,
             margin: const EdgeInsets.all(45.0),
             child: Center(
               child: Padding(

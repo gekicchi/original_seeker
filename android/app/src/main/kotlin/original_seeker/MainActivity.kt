@@ -1,4 +1,4 @@
-package com.example.original_seeker
+package original_seeker
 
 import io.flutter.embedding.android.FlutterActivity
 

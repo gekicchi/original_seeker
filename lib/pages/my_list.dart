@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:original_seeker/util/original_list.dart';
+import 'package:original_seeker/data/original_list.dart';
 
 class MyList extends StatelessWidget {
   const MyList({super.key});

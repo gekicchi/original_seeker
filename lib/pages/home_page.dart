@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:original_seeker/pages/original_details.dart';
-import 'package:original_seeker/util/original_list.dart';
+import 'package:original_seeker/data/original_list.dart';
 import 'my_list.dart';
 import 'profile.dart';
 import 'package:original_seeker/util/util_functions.dart';

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'original_version.dart';
+import '../widgets/original_version.dart';
 
 ListTile addPageToList(
   Text pageName,

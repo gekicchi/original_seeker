@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:original_seeker/util/original_list.dart';
-import 'package:original_seeker/util/original_version.dart';
+import 'package:original_seeker/data/original_list.dart';
+import 'package:original_seeker/widgets/original_version.dart';
 
 class OriginalDetails extends StatelessWidget {
   final OriginalVersion originalVersion;
@@ -41,7 +41,7 @@ class OriginalDetails extends StatelessWidget {
                       ),
                       Card(
                         margin: EdgeInsets.all(10),
-                        color: const Color.fromARGB(255, 232, 161, 161),
+                        color: Theme.of(context).cardColor,
                         child: ExpansionTile(
                           title: Card(
                             child: Text(
@@ -62,7 +62,7 @@ class OriginalDetails extends StatelessWidget {
                       ),
                       Card(
                         margin: EdgeInsets.all(10),
-                        color: const Color.fromARGB(255, 232, 161, 161),
+                        color: Theme.of(context).cardColor,
                         child: ExpansionTile(
                           title: Card(
                             child: Text('Reseñas', textAlign: TextAlign.center),

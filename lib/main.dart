@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:original_seeker/pages/home_page.dart';
+import 'theme/util.dart';
+import 'theme/theme.dart';
 
 void main() {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
@@ -29,13 +31,12 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
+    final brightness = View.of(context).platformDispatcher.platformBrightness;
+    TextTheme textTheme = createTextTheme(context, "Roboto", "Roboto Slab");
+    MaterialTheme theme = MaterialTheme(textTheme);
     return MaterialApp(
       title: 'Original Seeker',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 68, 18, 17),
-        ),
-      ),
+      theme: brightness == Brightness.light ? theme.light() : theme.dark(),
       home: const MyHomePage(title: 'Original Seeker'),
     );
   }
