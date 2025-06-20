@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:original_seeker/data/original_list.dart';
+import 'package:original_seeker/theme/theme.dart';
 import 'package:original_seeker/widgets/original_version.dart';
 
 class OriginalDetails extends StatelessWidget {
@@ -65,6 +66,7 @@ class OriginalDetails extends StatelessWidget {
                         color: Theme.of(context).cardColor,
                         child: ExpansionTile(
                           title: Card(
+                            color: MaterialTheme.lightScheme().primaryContainer,
                             child: Text('Reseñas', textAlign: TextAlign.center),
                           ),
                           childrenPadding: EdgeInsets.all(10),

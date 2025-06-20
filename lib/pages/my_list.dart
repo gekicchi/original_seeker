@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:original_seeker/data/original_list.dart';
+import 'package:original_seeker/theme/theme.dart';
 
 class MyList extends StatelessWidget {
   const MyList({super.key});
@@ -8,7 +9,7 @@ class MyList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: MaterialTheme.lightScheme().primary,
         title: const Text('Mi Lista'),
       ),
 

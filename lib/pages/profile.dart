@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:original_seeker/pages/my_list.dart';
+import 'package:original_seeker/theme/theme.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -8,7 +9,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: MaterialTheme.lightScheme().primary,
         title: const Text('Perfil'),
       ),
       body: SingleChildScrollView(

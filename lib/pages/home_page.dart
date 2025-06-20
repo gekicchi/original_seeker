@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:original_seeker/pages/original_details.dart';
 import 'package:original_seeker/data/original_list.dart';
-import 'my_list.dart';
-import 'profile.dart';
-import 'package:original_seeker/util/util_functions.dart';
+import 'package:original_seeker/theme/theme.dart';
+import 'package:original_seeker/widgets/my_drawer.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -21,41 +19,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: MaterialTheme.lightScheme().primary,
         title: Text(widget.title),
       ),
-      drawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            const DrawerHeader(child: Text('Contenidos')),
-            TextField(
-              controller: textController,
-              decoration: InputDecoration(hintText: 'Buscar'),
-            ),
-            TextButton(
-              onPressed:
-                  () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder:
-                          (context) => OriginalDetails(
-                            originalVersion:
-                                originals
-                                    .where(
-                                      (x) => x.or.name == textController.text,
-                                    )
-                                    .toList()[0],
-                          ),
-                    ),
-                  ),
-              child: Text('Buscar'),
-            ),
-            addPageToList(Text('Perfil'), context, Profile()),
-            addPageToList(Text('Mi Lista'), context, MyList()),
-          ],
-        ),
-      ),
+      drawer: MyDrawer(textController: textController),
       body: SingleChildScrollView(
         padding: EdgeInsets.all(10),
         child: Column(

@@ -35,6 +35,7 @@ class _MyAppState extends State<MyApp> {
     TextTheme textTheme = createTextTheme(context, "Roboto", "Roboto Slab");
     MaterialTheme theme = MaterialTheme(textTheme);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Original Seeker',
       theme: brightness == Brightness.light ? theme.light() : theme.dark(),
       home: const MyHomePage(title: 'Original Seeker'),
