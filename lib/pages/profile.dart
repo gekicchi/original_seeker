@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:original_seeker/pages/my_list.dart';
+import 'package:original_seeker/pages/preferences.dart';
 import 'package:original_seeker/theme/theme.dart';
 
 class Profile extends StatelessWidget {
@@ -16,7 +17,7 @@ class Profile extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(8),
           child: Card(
-            color: Theme.of(context).cardColor,
+            color: MaterialTheme.lightScheme().primaryContainer,
             margin: const EdgeInsets.all(45.0),
             child: Center(
               child: Padding(
@@ -35,7 +36,17 @@ class Profile extends StatelessWidget {
                             context,
                             MaterialPageRoute(builder: (context) => MyList()),
                           ),
-                      child: Text('Ver mi lista'),
+                      child: const Text('Ver mi lista'),
+                    ),
+                    TextButton(
+                      onPressed:
+                          () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Preferences(),
+                            ),
+                          ),
+                      child: const Text('Preferencias'),
                     ),
                   ],
                 ),

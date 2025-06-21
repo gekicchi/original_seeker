@@ -4,6 +4,7 @@ import 'package:original_seeker/pages/profile.dart';
 import 'package:original_seeker/pages/original_details.dart';
 import 'package:original_seeker/util/util_functions.dart';
 import 'package:original_seeker/data/original_list.dart';
+import 'package:original_seeker/pages/about.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key, required this.textController});
@@ -40,6 +41,7 @@ class MyDrawer extends StatelessWidget {
           ),
           addPageToList(const Text('Perfil'), context, Profile()),
           addPageToList(const Text('Mi Lista'), context, MyList()),
+          addPageToList(const Text('Acerca De'), context, About()),
         ],
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:original_seeker/util/util_functions.dart';
-import '../widgets/original_version.dart';
+import '../../widgets/original_version.dart';
 
 Original minecraft = Original(
   Image.asset('images/adaptations/minecraft.jpg'),

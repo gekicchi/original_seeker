@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:original_seeker/data/services/database_helper.dart';
 import 'package:original_seeker/pages/home_page.dart';
 import 'theme/util.dart';
 import 'theme/theme.dart';
+import 'dart:async';
 
-void main() {
+void main() async {
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  await DatabaseHelper().initializeDatabase();
   runApp(const MyApp());
 }
 

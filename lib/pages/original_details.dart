@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:original_seeker/data/original_list.dart';
+import 'package:original_seeker/data/models/original_list.dart';
 import 'package:original_seeker/theme/theme.dart';
 import 'package:original_seeker/widgets/original_version.dart';
 
@@ -12,7 +12,7 @@ class OriginalDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        backgroundColor: MaterialTheme.lightScheme().primary,
         title: Text(originalVersion.or.name),
       ),
       body: SingleChildScrollView(
@@ -23,6 +23,7 @@ class OriginalDetails extends StatelessWidget {
             children: [
               originalVersion.or.image,
               Card(
+                color: MaterialTheme.lightScheme().primaryContainer,
                 child: Center(
                   child: Column(
                     children: [
@@ -35,20 +36,18 @@ class OriginalDetails extends StatelessWidget {
                       ),
                       TextButton(
                         onPressed: () => {myList.add(originalVersion)},
-                        child: Text(
+                        child: const Text(
                           'Añadir a Lista',
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
                       Card(
                         margin: EdgeInsets.all(10),
-                        color: Theme.of(context).cardColor,
+                        color: MaterialTheme.lightScheme().secondaryContainer,
                         child: ExpansionTile(
-                          title: Card(
-                            child: Text(
-                              'Sinopsis',
-                              textAlign: TextAlign.center,
-                            ),
+                          title: const Text(
+                            'Sinopsis',
+                            textAlign: TextAlign.center,
                           ),
                           childrenPadding: EdgeInsets.all(10),
                           children: [Text(originalVersion.or.description)],
@@ -62,25 +61,35 @@ class OriginalDetails extends StatelessWidget {
                         maxLines: 3,
                       ),
                       Card(
-                        margin: EdgeInsets.all(10),
-                        color: Theme.of(context).cardColor,
+                        margin: EdgeInsets.all(8),
+                        color: MaterialTheme.lightScheme().secondaryContainer,
                         child: ExpansionTile(
-                          title: Card(
-                            color: MaterialTheme.lightScheme().primaryContainer,
-                            child: Text('Reseñas', textAlign: TextAlign.center),
+                          title: const Text(
+                            'Reseñas',
+                            textAlign: TextAlign.center,
                           ),
-                          childrenPadding: EdgeInsets.all(10),
+                          childrenPadding: EdgeInsets.all(8),
                           children: [
                             Card(
-                              child: Text(
-                                originalVersion.or.reviews[0],
-                                textAlign: TextAlign.start,
+                              color:
+                                  MaterialTheme.lightScheme().tertiaryContainer,
+                              child: Padding(
+                                padding: EdgeInsets.all(8),
+                                child: Text(
+                                  originalVersion.or.reviews[0],
+                                  textAlign: TextAlign.start,
+                                ),
                               ),
                             ),
                             Card(
-                              child: Text(
-                                originalVersion.or.reviews[1],
-                                textAlign: TextAlign.start,
+                              color:
+                                  MaterialTheme.lightScheme().tertiaryContainer,
+                              child: Padding(
+                                padding: EdgeInsets.all(8),
+                                child: Text(
+                                  originalVersion.or.reviews[1],
+                                  textAlign: TextAlign.start,
+                                ),
                               ),
                             ),
                           ],

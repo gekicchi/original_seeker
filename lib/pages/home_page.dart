@@ -24,25 +24,11 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       drawer: MyDrawer(textController: textController),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(8),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           spacing: 10.0,
           children: [
-            Card(
-              margin: EdgeInsets.all(10),
-              child: Column(
-                children: [
-                  Text(
-                    'Descripción',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                  ),
-                  Text(
-                    'Original Seeker busca darle un lugar a aquellas personas que no se satisfacen solo con ver películas adaptadas sino que también quieren conocer las versiones originales de estas',
-                  ),
-                ],
-              ),
-            ),
             Text(
               'Recientemente Adaptado',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
