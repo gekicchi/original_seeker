@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:original_seeker/data/services/database_helper.dart';
 import 'package:original_seeker/pages/home_page.dart';
+import 'package:original_seeker/provider/app_data.dart';
+import 'package:provider/provider.dart';
 import 'theme/util.dart';
 import 'theme/theme.dart';
 import 'dart:async';
@@ -37,11 +39,14 @@ class _MyAppState extends State<MyApp> {
     final brightness = View.of(context).platformDispatcher.platformBrightness;
     TextTheme textTheme = createTextTheme(context, "Roboto", "Roboto Slab");
     MaterialTheme theme = MaterialTheme(textTheme);
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Original Seeker',
-      theme: brightness == Brightness.light ? theme.light() : theme.dark(),
-      home: const MyHomePage(title: 'Original Seeker'),
+    return ChangeNotifierProvider<AppData>(
+      create: (context) => AppData(),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Original Seeker',
+        theme: brightness == Brightness.light ? theme.light() : theme.dark(),
+        home: const MyHomePage(title: 'Original Seeker'),
+      ),
     );
   }
 }

@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:original_seeker/data/models/original_database.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
@@ -15,6 +14,12 @@ class DatabaseHelper {
 
   Future<void> initializeDatabase() async {
     await _database;
+  }
+
+  Future<Database> get database async {
+    if (_database != null) return _database!;
+    _database = await _initDatabase();
+    return _database!;
   }
 
   Future<Database> _initDatabase() async {
@@ -38,8 +43,8 @@ class DatabaseHelper {
   }
 
   Future<void> insertOriginal(Original or) async {
-    final db = await _database;
-    await db?.insert(
+    final db = await database;
+    await db.insert(
       'originals',
       or.toMap(),
       conflictAlgorithm: ConflictAlgorithm.replace,

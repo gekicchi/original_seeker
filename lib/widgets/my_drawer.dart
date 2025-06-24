@@ -3,7 +3,7 @@ import 'package:original_seeker/pages/my_list.dart';
 import 'package:original_seeker/pages/profile.dart';
 import 'package:original_seeker/pages/original_details.dart';
 import 'package:original_seeker/util/util_functions.dart';
-import 'package:original_seeker/data/original_list.dart';
+import 'package:original_seeker/data/models/original_list.dart';
 import 'package:original_seeker/pages/about.dart';
 
 class MyDrawer extends StatelessWidget {

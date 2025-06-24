@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:original_seeker/data/original_list.dart';
+import 'package:original_seeker/data/models/original_list.dart';
 import 'package:original_seeker/theme/theme.dart';
 import 'package:original_seeker/widgets/my_drawer.dart';
 
